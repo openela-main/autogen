@@ -1,0 +1,12 @@
+diff -up autogen-5.18.12/pkg/libopts/mklibsrc.sh.verifyh autogen-5.18.12/pkg/libopts/mklibsrc.sh
+--- autogen-5.18.12/pkg/libopts/mklibsrc.sh.verifyh	2015-10-03 19:39:47.000000000 +0200
++++ autogen-5.18.12/pkg/libopts/mklibsrc.sh	2017-03-07 11:35:23.952528880 +0100
+@@ -42,7 +42,7 @@ files='libopts.c gettext.h parse-duratio
+     fgrep '#include' libopts.c | \
+        sed -e 's,"$,,;s,#.*",,' )
+ 
+-for f in ${files} intprops.h
++for f in ${files} intprops.h verify.h
+ do
+   test -f ${f} &&
+     cp -f ${f} ${tagd}/${f} && continue
